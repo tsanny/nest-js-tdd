@@ -16,7 +16,10 @@ export class AppointmentService {
 
     if (
       appointmentData.endTime.getUTCDate() !==
-      appointmentData.startTime.getUTCDate()
+      appointmentData.startTime.getUTCDate() ||
+
+      appointmentData.endTime.getUTCMonth() !==
+      appointmentData.startTime.getUTCMonth()
     ) {
       throw new Error(
         "appointment's endTime should be in the same day as start time's",
