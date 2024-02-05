@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Patient } from './patient.model';
 
 export interface PatientInput {
-    name: string;
+  name: string;
 }
 
 Injectable()

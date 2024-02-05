@@ -24,6 +24,15 @@ describe('PatientService', () => {
         id: expect.any(Number),
         name: 'John Doe',
       });
+
+      describe('doesPatientExist', () => {
+        it('should return false when no patient was registered', async () => {
+          const patientId = 1;
+          const exists = await service.doesPatientExist(patientId);
+
+          expect(exists).toBe(false);
+        });
+      });
     });
   });
 });
